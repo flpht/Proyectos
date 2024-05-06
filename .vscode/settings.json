@@ -12,7 +12,8 @@
             "driver": "MySQL",
             "name": "Ferramas",
             "database": "Ferramas",
-            "username": "root"
+            "username": "root",
+            "askForPassword": true
         }
     ]
 }
