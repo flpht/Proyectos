@@ -1,9 +1,11 @@
-from flask import Flask, jsonify, request
+from flask import Flask, render_template, request, jsonify
 import mysql.connector
 import uuid
+import my_bcchapi
 
 app = Flask(__name__)
 
+# Configuración de la base de datos
 db = mysql.connector.connect(
     host="localhost",
     port=3307,
@@ -12,6 +14,13 @@ db = mysql.connector.connect(
     database="Ferramas"
 )
 
+# Ruta para la página de inicio
+@app.route('/')
+def index():
+    tasa_usd_clp = my_bcchapi.obtener_tasa_de_cambio()
+    return render_template('index.html', tasa_usd_clp=tasa_usd_clp)
+
+# Ruta para agregar un producto
 @app.route('/productos', methods=['POST'])
 def add_producto():
     try:
@@ -37,6 +46,7 @@ def add_producto():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# Ruta para obtener todos los productos
 @app.route('/productos', methods=['GET'])
 def get_productos():
     try:
@@ -62,6 +72,7 @@ def get_productos():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# Ruta para eliminar un producto por su código
 @app.route('/productos/<codigo_producto>', methods=['DELETE'])
 def delete_producto(codigo_producto):
     try:
@@ -74,6 +85,22 @@ def delete_producto(codigo_producto):
         return jsonify({"Mensaje": "Producto eliminado correctamente"}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+# Ruta para convertir moneda
+@app.route('/convertir', methods=['POST'])
+def convertir():
+    try:
+        datos = request.get_json()
+        monto = float(datos['monto'])
+        moneda = datos['moneda']
+        tasa_usd_clp = my_bcchapi.obtener_tasa_de_cambio()
+        if tasa_usd_clp:
+            resultado = my_bcchapi.convertir_moneda(monto, moneda, tasa_usd_clp)
+            return jsonify({'resultado': resultado})
+        else:
+            return jsonify({'error': 'No se pudo obtener la tasa de cambio'}), 500
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
