@@ -1,0 +1,192 @@
+/* General styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    background-color: #007bff;
+    /* Color azul de Bootstrap */
+}
+
+.navbar-brand img {
+    max-width: 100px;
+    /* Ajusta el ancho máximo del logo según sea necesario */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    /* Color del texto del enlace */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+    /* Cambia el color del texto del enlace al pasar el ratón */
+}
+
+
+.navbar {
+    padding: 10px 15px;
+}
+
+.navbar-brand img {
+    max-width: 40px;
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 15px;
+}
+
+.form-inline .form-control {
+    width: 200px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Hero section */
+
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    text-align: center;
+    padding: 100px 0;
+    color: white;
+}
+
+.hero-text {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.hero .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Productos section */
+
+.productos {
+    padding: 40px 0;
+}
+
+.productos h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.producto img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.producto .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ofertas section */
+
+.ofertas {
+    padding: 40px 0;
+}
+
+.ofertas h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ofertas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.oferta {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.oferta img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.oferta h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}

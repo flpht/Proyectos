@@ -1,3 +1,5 @@
+
+
 from flask import Flask, render_template, request, jsonify
 import mysql.connector
 import uuid
@@ -19,6 +21,11 @@ db = mysql.connector.connect(
 def index():
     tasa_usd_clp = my_bcchapi.obtener_tasa_de_cambio()
     return render_template('conversor_moneda.html', tasa_usd_clp=tasa_usd_clp)
+
+# Ruta para la página de inicio 
+@app.route('/inicio')
+def inicio():
+    return render_template('inicio.html')
 
 # Ruta para agregar un producto
 @app.route('/productos', methods=['POST'])

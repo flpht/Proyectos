@@ -1,55 +1,74 @@
-css
-
-/* Estilo para el contenedor principal para centrar verticalmente y añadir espacio alrededor */
+/* Estilo para el contenedor principal */
 .container {
-
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    /* Hace que el contenedor tenga al menos el alto de la pantalla */
     padding: 50px 0;
-    /* Añade espacio arriba y abajo */
     font-family: Arial, sans-serif;
-    /* Establece una fuente general, modifica según necesites */
-
 }
 
+/* Estilo para el card */
 .card {
-
     padding: 40px;
-    /* Espaciado interno */
     border-radius: 20px;
-    /* Bordes redondeados */
     box-shadow: 0 40px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra ligera para darle profundidad */
     width: 530px;
-    /* Ancho específico */
-    margin-top: 50px;
-    /* Ajuste vertical si es necesario */
-    background: radial-gradient(rgb(194, 169, 169), rgb(116, 150, 243))
+    margin: 0 auto;
+    background: radial-gradient(rgb(194, 169, 169), rgb(116, 150, 243));
 }
 
-/* Ajustes para los elementos internos para mayor claridad y mejor espacio */
+/* Ajustes para tablets (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .card {
+        width: 80%;
+        margin-top: 0;
+    }
+
+    .input-group,
+    .form-select,
+    .btn {
+        margin-top: 20px;
+    }
+}
+
+/* Ajustes para móviles (menos de 768px) */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .input-group,
+    .form-select,
+    .btn {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .input-group-text,
+    .form-control,
+    .btn {
+        font-size: 16px;
+    }
+}
+
+/* Ajustes para los elementos internos */
 .input-group,
 .form-select,
 .btn {
     margin-top: 30px;
-    /* Añade espacio entre los elementos */
 }
 
-/* Estilos para botones y entradas para hacerlos más grandes y legibles */
+/* Estilos para botones y entradas */
 .input-group-text,
 .form-control,
 .form-select,
 .btn {
     height: 50px;
-    /* Altura mayor para los elementos de entrada y botones */
     border-radius: 10px;
-    /* Bordes redondeados */
 }
-
 
 .btn:hover {
     background-color: #222b5a;
-    /* Cambio de color al pasar el mouse */
 }

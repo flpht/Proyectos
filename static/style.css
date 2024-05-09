@@ -1,12 +1,21 @@
-.container-fluid {
-    background-color: rgb(33, 55, 75);
+.navbar {
+    padding: 10px 15px;
+    /* Añadir espacio interno al navbar */
 }
 
-.nav-link {
-    color: white;
-    font-size: 25px;
+.navbar-brand img {
+    max-width: 40px;
+    /* Limitar el tamaño máximo del logo */
+    height: auto;
+    /* Mantener la proporción */
 }
 
-.imagen {
-    margin-left: auto;
+.navbar-nav .nav-link {
+    padding: 10px 15px;
+    /* Añadir espacio interno a los enlaces del navbar */
+}
+
+.form-inline .form-control {
+    width: 200px;
+    /* Ajustar el ancho del campo de búsqueda */
 }

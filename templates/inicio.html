@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramax</title>
+    <link rel="stylesheet" href="/static/scss-home.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+        <a class="navbar-brand" href="#">
+            <img src="/static/images/logo_ferremas.webp" class="d-inline-block align-top" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/inicio">Inicio <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Convertidor de Moneda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5000/productos">Ver productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <section class="productos">
+        <div class="container">
+            <h2>Productos destacados</h2>
+            <div class="productos-grid">
+                <div class="producto">
+                    <img src="/static/images/taladroInalambrico.webp" alt="Producto 1">
+                    <h3>Taladro inalámbrico</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+                <div class="producto">
+                    <img src="/static/images/cierra circularwebp.webp" alt="Producto 2">
+                    <h3>Sierra circular</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+                <div class="producto">
+                    <img src="/static/images/matrillo.jpeg" alt="Producto 3">
+                    <h3>Martillo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ofertas">
+        <div class="container">
+            <h2>Ofertas especiales</h2>
+            <div class="ofertas-grid">
+                <div class="oferta">
+                    <img src="/static/images/taladroInalambrico.webp" alt="Oferta 1">
+                    <h3>Taladro inalámbrico 20% off</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+                <div class="oferta">
+                    <img src="/static/images/cierra circularwebp.webp" alt="Oferta 2">
+                    <h3>Sierra circular 15% off</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ferramax</p>
+            <ul>
+                <li><a href="#">Aviso legal</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
