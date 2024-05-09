@@ -18,7 +18,7 @@ db = mysql.connector.connect(
 @app.route('/')
 def index():
     tasa_usd_clp = my_bcchapi.obtener_tasa_de_cambio()
-    return render_template('index.html', tasa_usd_clp=tasa_usd_clp)
+    return render_template('conversor_moneda.html', tasa_usd_clp=tasa_usd_clp)
 
 # Ruta para agregar un producto
 @app.route('/productos', methods=['POST'])
@@ -88,6 +88,7 @@ def delete_producto(codigo_producto):
 
 # Ruta para convertir moneda
 @app.route('/convertir', methods=['POST'])
+
 def convertir():
     try:
         datos = request.get_json()

@@ -1,0 +1,12 @@
+.container-fluid {
+    background-color: rgb(33, 55, 75);
+}
+
+.nav-link {
+    color: white;
+    font-size: 25px;
+}
+
+.imagen {
+    margin-left: auto;
+}

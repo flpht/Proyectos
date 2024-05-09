@@ -1,0 +1,55 @@
+css
+
+/* Estilo para el contenedor principal para centrar verticalmente y añadir espacio alrededor */
+.container {
+
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    /* Hace que el contenedor tenga al menos el alto de la pantalla */
+    padding: 50px 0;
+    /* Añade espacio arriba y abajo */
+    font-family: Arial, sans-serif;
+    /* Establece una fuente general, modifica según necesites */
+
+}
+
+.card {
+
+    padding: 40px;
+    /* Espaciado interno */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    box-shadow: 0 40px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera para darle profundidad */
+    width: 530px;
+    /* Ancho específico */
+    margin-top: 50px;
+    /* Ajuste vertical si es necesario */
+    background: radial-gradient(rgb(194, 169, 169), rgb(116, 150, 243))
+}
+
+/* Ajustes para los elementos internos para mayor claridad y mejor espacio */
+.input-group,
+.form-select,
+.btn {
+    margin-top: 30px;
+    /* Añade espacio entre los elementos */
+}
+
+/* Estilos para botones y entradas para hacerlos más grandes y legibles */
+.input-group-text,
+.form-control,
+.form-select,
+.btn {
+    height: 50px;
+    /* Altura mayor para los elementos de entrada y botones */
+    border-radius: 10px;
+    /* Bordes redondeados */
+}
+
+
+.btn:hover {
+    background-color: #222b5a;
+    /* Cambio de color al pasar el mouse */
+}
