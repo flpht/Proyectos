@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmación de Transacción</title>
+    <link rel="stylesheet" href="../static/confirmacion.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmación de Transacción</h1>
+        
+        {% if response['response_code'] == 0 %}
+            <div class="success-message">
+                <h2>La transacción ha sido autorizada exitosamente.</h2>
+                <p><strong>Monto:</strong> {{ response['amount'] }}</p>
+                <p><strong>Orden de Compra:</strong> {{ response['buy_order'] }}</p>
+                <p><strong>Código de Autorización:</strong> {{ response['authorization_code'] }}</p>
+                <p><strong>Fecha de Transacción:</strong> {{ response['transaction_date'] }}</p>
+                <p><strong>Tipo de Pago:</strong> {{ response['payment_type_code'] }}</p>
+                <p><strong>Número de Cuotas:</strong> {{ response['installments_number'] }}</p>
+                <p><strong>Estado:</strong> {{ response['status'] }}</p>
+            </div>
+            <a href="/" class="btn-volver">Volver a Productos</a>
+        {% else %}
+            <div class="error-message">
+                <h2>La transacción no pudo ser autorizada.</h2>
+                <p>Por favor, intenta nuevamente o comunícate con tu banco para obtener más información.</p>
+            </div>
+            <a href="/productos" class="btn-volver">Volver a Productos</a>
+        {% endif %}
+    </div>
+</body>
+</html>

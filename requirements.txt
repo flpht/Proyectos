@@ -3,4 +3,4 @@ mysql-connector-python==8.0.28
 bcchapi
 pandas
 requests
-python3-dev
+transbank-sdk

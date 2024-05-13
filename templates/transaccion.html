@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/iniciar_pago" method="POST">
+        
+        <label for="buy_order">Orden de Compra:</label>
+        <input type="text" id="buy_order" name="buy_order" required><br>
+    
+        <label for="session_id">ID de Sesión:</label>
+        <input type="text" id="session_id" name="session_id" required><br>
+    
+        <label for="amount">Monto:</label>
+        <input type="number" id="amount" name="amount" required><br>
+    
+        <label for="return_url">URL de Retorno:</label>
+        <input type="text" id="return_url" name="return_url" required><br>
+    
+        <input type="submit" value="Pagar">
+    </form>
+    
+</body>
+</html>
+

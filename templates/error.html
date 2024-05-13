@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error en Pago</title>
+</head>
+<body>
+    <h1>Error en el Pago</h1>
+    <p>{{ error_message }}</p>
+    {% if response %}
+        <p>Código de Respuesta: {{ response.response_code }}</p>
+        <p>Estado: {{ response.status }}</p>
+        <!-- Puedes agregar más detalles de la respuesta de error según tus necesidades -->
+    {% endif %}
+</body>
+</html>

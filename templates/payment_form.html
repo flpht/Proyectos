@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="payment_form" method="POST" action="{{ payment_url }}">
+        <input type="hidden" name="token_ws" value="{{ token }}">
+    </form>
+    
+    <script>
+        document.getElementById("payment_form").submit();
+    </script>
+    
+</body>
+</html>
